@@ -2,6 +2,7 @@
 	box-sizing:border-box;
 }
 html{
+	overflow-x:hidden;
 	/* for sticky footer */
 	height:100%
 }
@@ -77,8 +78,8 @@ img{
 	width:100%;
 }
 .space-y{
-	padding-top:16px;
-	padding-bottom:16px;
+	padding-top:32px;
+	padding-bottom:32px;
 }
 @media (min-width:768px) {
 	.space-y{
@@ -159,8 +160,10 @@ img{
 .hero .row{
 	align-items:stretch;
 }
-.hero-left{
-	padding:8px;
+@media (min-width:576px) {
+	.hero-left{
+		padding:8px;
+	}
 }
 .hero-img{
 	margin-bottom:16px;
@@ -277,12 +280,12 @@ img{
 	}
 }
 .events-form{
-	margin-bottom:24px;
+	margin-bottom:32px;
 }
 .event{
 	border-radius:4px;
 	overflow:hidden;
-	margin-bottom:8px;
+	margin-bottom:16px;
 }
 @media (min-width:576px) {
 	h2,.events-form{
@@ -290,6 +293,11 @@ img{
 	}
 	.event{
 		margin:8px;
+	}
+}
+@media (min-width:768px) {
+	.event{
+		margin-bottom:8px;
 	}
 }
 @media (min-width:992px) {
@@ -394,6 +402,7 @@ img{
 }
 .input-range-wrapper{
 	margin-top:8px;
+	margin-bottom:56px;
 }
 .footer{
 	background-color:#fff;
