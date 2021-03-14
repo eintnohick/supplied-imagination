@@ -63,8 +63,10 @@ img{
 	padding-left:24px;
 	padding-right:24px;
 }
-.text-center{
+.view-more{
 	text-align:center;
+	margin-top:16px;
+	margin-bottom:16px;
 }
 .row{
 	display:flex;
