@@ -41,14 +41,23 @@ $(function(){
 		e.preventDefault();
 		console.log('nothing doing');
 	});
-	
-    $('.input-range').rangepicker({
-        type:'double',
-        startValue:20,
-        endValue:60,
-        translateSelectLabel:function(currentPosition,totalPosition){
-            return parseInt(100*(currentPosition/totalPosition));
-        }
+
+	var range=$('#slider-range');
+    $(range).slider({
+		range:true,
+		min:0,
+		max:600,
+		values:[20,500],
+		create:function(event,ui){
+			$(range).find(".ui-slider-handle:first").append('<span id="slider-bubble-1" class="ui-slider-handle-bubble">'+$(range).slider('values',0)+'</span>');
+			$(range).find(".ui-slider-handle:last").append('<span id="slider-bubble-2" class="ui-slider-handle-bubble">'+$(range).slider('values',1)+'</span>');
+		},
+		slide:function(event,ui){
+			$('#slider-bubble-1').text($(range).slider('values',0));
+			$('#slider-bubble-2').text($(range).slider('values',1));
+		}
     });
+	
+	
 	
 });
